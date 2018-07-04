@@ -1,0 +1,5 @@
+.listSound {
+    width: 100%;
+    display: flex;
+    margin: var(--base-spacing);
+}

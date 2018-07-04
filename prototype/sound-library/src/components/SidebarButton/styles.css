@@ -1,0 +1,21 @@
+.sidebarButton {
+    background-color: var(--accent);
+    color: var(--dark-accent);
+    border: 1px solid var(--white);
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: var(--sidebar-width);
+    width: var(--sidebar-width);
+}
+
+.sidebarButton.active {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.sidebarButton:hover {
+    background-color: rgba(0,0,0,0.2);
+}
