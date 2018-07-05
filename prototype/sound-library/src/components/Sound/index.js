@@ -1,13 +1,7 @@
 import React from 'react';
 
+import Icon from '../Icon';
 import './styles.css';
-
-
-const Icon = props => (
-  <div className="icon">
-    <i className={`fas ${props.icon}`} />
-  </div>
-);
 
 
 const Sound = props => (
@@ -16,10 +10,22 @@ const Sound = props => (
       <div className="title">
         { props.title }
       </div>
+      <div className="info">
+        <Icon icon="fa-copyright" />
+      </div>
     </div>
-    <div className="controls">
-      <Icon icon="fa-play" />
-      <Icon icon="fa-plus" />
+    <div className="lowerSound">
+      <div className="controls">
+        <Icon icon="fa-play" />
+        <Icon icon="fa-plus" />
+      </div>
+      <div className="duration">
+        3'23"
+      </div>
+      <div className="similar">
+        <Icon icon="fa-info" />
+        <Icon icon="fa-angle-double-right" />
+      </div>
     </div>
     <div className="wave">
     </div>
