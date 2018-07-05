@@ -1,5 +1,60 @@
 .listSound {
-    width: 100%;
+    position: relative;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: calc(100% - calc(var(--base-spacing) * 2));
+    height: 4em;
     margin: var(--base-spacing);
+    box-shadow: 1px 1px 5px rgba(0,3,4,0.4);
+    background-color: rgba(12,255,225,0.1);
+    overflow: hidden;
+    padding: 0;
+}
+
+.upperSound {
+    padding: calc(var(--base-spacing) / 3);
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.title {
+    z-index: 1;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% - var(--sidebar-width));
+}
+
+.controls {
+    z-index: 1;
+    padding: calc(var(--base-spacing) / 4);
+    background-color: rgba(0,0,0,0.5);
+    font-size: 16px;
+    display: flex;
+}
+
+.icon {
+    z-index: 1;
+    margin-right: var(--base-spacing);
+}
+
+
+.wave {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-image: linear-gradient(rgba(35,57,59,0.8), rgba(35,57,59,0.8) 10%),url("https://freesound.org/data/displays/433/433009_5437446_wave_M.png");
+    z-index: 0;
+    filter: brightness(200%) contrast(200%) hue-rotate(350deg);
+    width: 100%;
+    height: 100%;
+    background-size: 50% 100%;
+    -webkit-mask-image:
+
 }

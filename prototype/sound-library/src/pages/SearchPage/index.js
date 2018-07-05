@@ -7,12 +7,29 @@ import './styles.css';
 
 const SearchPage = () => (
   <div className="search page">
-    <input className="textInput" type="text" placeholder="Search..."/>
-    <List>
-      <Sound sound="ajo" />
-      <Sound sound="ciao" />
-      <Sound sound="ahoj" />
-    </List>
+    <div className="searchHeader">
+      <input className="textInput" type="text" placeholder="Search..."/>
+    </div>
+    <div className="results">
+      <List>
+        <Sound sound="ajo" />
+        <Sound sound="ciao" />
+        <Sound sound="ahoj" />
+      </List>
+
+      <List>
+        <Sound sound="ajo" />
+        <Sound sound="ciao" />
+        <Sound sound="ciao" />
+        <Sound sound="ciao" />
+        <Sound sound="ahoj" />
+      </List>
+
+      <List>
+        <Sound sound="ahoj" />
+      </List>
+
+    </div>
   </div>
 );
 
