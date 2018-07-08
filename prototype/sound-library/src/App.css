@@ -32,7 +32,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;  /* remove scrollbar space */
+    width: 2px;  /* remove scrollbar space */
     background: transparent;  /* optional: just make scrollbar invisible */
 }
 /* optional: show position indicator in red */
@@ -71,6 +71,8 @@ p {
     flex-wrap: wrap;
     overflow: scroll;
     background-color: var(--background-lighter);
+    padding-right: var(--base-spacing);
+    padding-top: var(--base-spacing);
 }
 
 
@@ -97,6 +99,6 @@ p {
 }
 
 .page.active {
-    background-color: rgba(12,255,255,0.01);
+    background-color: rgba(0,0,0,0.3);
     box-shadow: 4px 4px 15px rgba(0,3,4,0.4);
 };

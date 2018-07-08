@@ -25,7 +25,7 @@
     /* width: calc(30% - calc(4 * var(--base-spacing))); */
     width: 100%;
     /* calc(calc(70% - var(--sidebar-width) - calc(3 * var(--base-spacing))) / 2); */
-    z-index: 2;
+    z-index: 20;
     top: 0;
     min-height: var(--sidebar-width);
     display: flex;
@@ -57,6 +57,7 @@
 
 .searchHeader.active {
     /* background-color: transparent; */
-    background-color: rgba(38,38,43,1);
+    /* background-color: rgba(38,38,43,1); */
+    background-color: rgba(27,24,28,1);
     /* rgba(12,255,255,0.1); */
 }

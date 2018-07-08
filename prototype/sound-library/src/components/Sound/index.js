@@ -8,7 +8,7 @@ const Sound = props => (
   <div className="listSound">
     <div className="upperSound">
       <div className="title">
-        { props.title }
+        <b>{ props.title }</b>
       </div>
       <div className="info">
         <Icon icon="fa-copyright" />
@@ -27,7 +27,7 @@ const Sound = props => (
         <Icon icon="fa-angle-double-right" />
       </div>
     </div>
-    <div className="wave">
+    <div className="wave" style={{ backgroundImage: `url(${props.image})` }}>
     </div>
   </div>
 );

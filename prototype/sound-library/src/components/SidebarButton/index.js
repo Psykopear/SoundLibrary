@@ -4,8 +4,8 @@ import './styles.css';
 
 
 const SidebarButton = props => (
-  <div className={`sidebarButton ${props.active ? 'active' : ''}`}>
-    <i className={`fas ${props.icon}`} />
+  <div onClick={() => props.onClick(props.page)} className={`sidebarButton ${props.active ? 'active' : ''}`}>
+    <i className={`fas ${props.icon}`}  />
   </div>
 );
 
