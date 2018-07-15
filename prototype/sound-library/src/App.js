@@ -3,6 +3,7 @@ import Sidebar from './components/Sidebar';
 import SearchPage from './pages/SearchPage';
 import PlusPage from './pages/PlusPage';
 import ListPage from './pages/ListPage';
+import sounds from './data';
 import './App.css';
 
 
@@ -19,7 +20,7 @@ class App extends React.Component {
     this.counter = 1;
     this.state = {
       page: 'search',
-      library: [],
+      library: sounds.map(s => s.name),
       search: {
         pages: [1],
         active: 1,

@@ -4,13 +4,18 @@ import Icon from '../Icon';
 import './styles.css';
 
 
+          // <Icon icon={props.inLibrary ? "fa-minus" : "fa-plus"} onClick={props.inLibrary ? props.removeFromLibrary : props.addToLibrary} />
 const Sound = props => (
-  <div className="listSound" style={props.visible ? {} : {filter: 'grayscale(100%)'}}>
+  <div
+    className="listSound"
+    style={props.visible ? {} : {filter: 'grayscale(100%)'}}
+    onDoubleClick={props.inLibrary ? props.removeFromLibrary : props.addToLibrary}
+    // onClick={props.onPlay}
+  >
     <div className="boh" >
       <div className={`lowerSound ${props.playing ? 'playing' : ''}`} >
         <div className="controls">
           <Icon icon={props.playing ? "fa-pause" : "fa-play"} onClick={props.onPlay} />
-          <Icon icon={props.inLibrary ? "fa-minus" : "fa-plus"} onClick={props.inLibrary ? props.removeFromLibrary : props.addToLibrary} />
         </div>
         <div className="duration">
           3'23"
