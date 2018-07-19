@@ -2,9 +2,9 @@ import React from 'react';
 import './styles.css';
 
 
-const List = ({ children }) => (
-  <div className="list">
-    { children }
+const List = props => (
+  <div className="list" {...props} >
+    { props.children }
   </div>
 );
 

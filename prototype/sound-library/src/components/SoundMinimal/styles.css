@@ -6,6 +6,7 @@
     align-items: flex-end;
     width: 10em;
                /* calc(100% - calc(var(--base-spacing) * 2)); */
+    min-height: 3em;
     height: 3em;
     margin-top: calc(var(--base-spacing) / 2);
     /* margin-bottom: calc(var(--base-spacing) / 2); */
