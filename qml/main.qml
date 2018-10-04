@@ -43,6 +43,7 @@ Window {
           layout.currentIndex = 0;
           parent.color = "#20000000";
           button1.color = "#00000000";
+          button2.color = "#00000000";
         }
 
         onEntered: {
@@ -78,6 +79,7 @@ Window {
           layout.currentIndex = 1;
           parent.color = "#20000000";
           button0.color = "#00000000";
+          button2.color = "#00000000";
         }
         onEntered: {
           parent.color = "#20000000"
@@ -86,6 +88,67 @@ Window {
         onExited: {
           if (layout.currentIndex !== 1)
             parent.color = "#00000000"
+        }
+      }
+    }
+
+    Rectangle {
+      id: button2
+      y: 200
+      width: 100
+      height: 100
+      color: {
+        if (layout.currentIndex === 2)
+          "#20000000"
+        else
+          "transparent"
+      }
+      Awesome.Button {
+        anchors.fill: parent
+        icon: awesome.icons.fa_user
+      }
+      MouseArea {
+        anchors.fill: parent
+        hoverEnabled: true
+        onClicked: {
+          layout.currentIndex = 2;
+          parent.color = "#20000000";
+          button0.color = "#00000000";
+          button1.color = "#00000000";
+        }
+        onEntered: {
+          parent.color = "#20000000"
+        }
+
+        onExited: {
+          if (layout.currentIndex !== 2)
+            parent.color = "#00000000"
+        }
+      }
+    }
+
+
+    Rectangle {
+      id: quit
+      y: parent.height - 100
+      width: 100
+      height: 100
+      color: "transparent"
+      Awesome.Button {
+        anchors.fill: parent
+        icon: awesome.icons.fa_power_off
+      }
+      MouseArea {
+        anchors.fill: parent
+        hoverEnabled: true
+        onClicked: {
+          Qt.quit()
+        }
+        onEntered: {
+          parent.color = "#20000000"
+        }
+        onExited: {
+          parent.color = "#00000000"
         }
       }
     }
