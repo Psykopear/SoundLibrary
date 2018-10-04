@@ -97,7 +97,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log('PAGES:', this.state.search.pages)
     return (
       <div className="container">
         <Sidebar onClick={page => this.setState({ page })} page={this.state.page} />
