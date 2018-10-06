@@ -12,10 +12,10 @@ Item {
   height: 400
   onActiveChanged: {
     if (active) {
-      dropshadow.radius = 15
+      dropshadow.radius = 19
       rectangle.color = "#262328"
     } else {
-      dropshadow.radius = 7
+      dropshadow.radius = 12
       rectangle.color = "#262328"
     }
   }
@@ -36,7 +36,7 @@ Item {
     anchors.fill: container
     horizontalOffset: 4
     verticalOffset: 4
-    radius: 7
+    radius: 12
     samples: 17
     color: "#70000000"
     source: rectangle

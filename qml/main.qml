@@ -26,27 +26,17 @@ Window {
     size: 80
   }
 
-  ScrollView {
-    height: root.height
-    width: root.width - 100
+  StackLayout {
+    id: layout1
+    height: parent.height
+    width: parent.width - 80
     x: 80
+    currentIndex: 0
 
 
-    Flickable {
-      contentWidth: parent.width
-      contentHeight: parent.height * 5
-      anchors.fill: parent
-      StackLayout {
-        id: layout1
-        anchors.fill: parent
-        currentIndex: 0
+    SearchPage {}
+    LibraryPage {}
+    UserPage {}
 
-
-        SearchPage {}
-        LibraryPage {}
-        UserPage {}
-
-      }
-    }
   }
 }

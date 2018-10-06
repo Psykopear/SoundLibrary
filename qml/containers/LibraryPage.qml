@@ -3,7 +3,6 @@ import QtQuick.Layouts 1.11
 import "../components"
 
 Item {
-  anchors.fill: parent
 
   ListView {
     width: 200
