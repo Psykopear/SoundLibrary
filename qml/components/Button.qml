@@ -6,6 +6,7 @@ import "controls" as Awesome
 // for mouse entered/exited
 Rectangle {
   property bool active: false
+  property int size: 100
   property string icon
 
   property var onClicked: function() {}
@@ -20,8 +21,8 @@ Rectangle {
   }
 
 
-  width: 100
-  height: 100
+  width: size
+  height: size
 
   color: getColor()
 
