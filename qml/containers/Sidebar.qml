@@ -3,19 +3,7 @@ import QtQuick.Layouts 1.11
 import QtQuick.Window 2.2
 
 import "components"
-import "components/controls" as Awesome
-
-Window {
-  x: (Screen.desktopAvailableWidth - width) / 2
-  y: (Screen.desktopAvailableHeight - height) / 2
-  minimumWidth: 800
-  minimumHeight: 600
-  color: "#262328"
-
-  FontAwesome {
-    id: awesome
-    resource: "http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.ttf"
-  }
+import "controls" as Awesome
 
   Rectangle {
     id: sideBar
@@ -74,38 +62,3 @@ Window {
       }
     }
   }
-
-
-  StackLayout {
-    id: layout
-    x: 100
-    height: parent.height
-    width: parent.width - 100
-    currentIndex: 0
-
-    GridLayout {
-      Rectangle {
-        color: 'teal'
-        width: 100
-        height: 100
-      }
-      Rectangle {
-        color: 'plum'
-        width: 100
-        height: 100
-      }
-    }
-    GridLayout {
-      Rectangle {
-        color: 'plum'
-        width: 100
-        height: 100
-      }
-      Rectangle {
-        color: 'teal'
-        width: 100
-        height: 100
-      }
-    }
-  }
-}
