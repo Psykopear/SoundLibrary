@@ -1,5 +1,5 @@
 import QtQuick 2.11
-import QtQuick.Controls 1.4
+import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.11
 import QtQuick.Window 2.2
 
@@ -9,8 +9,6 @@ import "components/controls" as Awesome
 
 Window {
   id: root
-  x: (Screen.desktopAvailableWidth - width) / 2
-  y: (Screen.desktopAvailableHeight - height) / 2
   minimumWidth: 800
   minimumHeight: 600
   color: "#262328"
@@ -33,8 +31,9 @@ Window {
     x: 80
     currentIndex: 0
 
-
-    SearchPage {}
+    SearchPage {
+      anchors.fill: parent
+    }
     LibraryPage {}
     UserPage {}
 

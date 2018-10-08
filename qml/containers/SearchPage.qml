@@ -1,13 +1,28 @@
 import QtQuick 2.11
+import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.11
 import "../components"
 
-Flow {
-  padding: 20
-  spacing: 30
+ScrollView {
+    Flow {
+        id: flow
+        width: parent.width
+        padding: 20
+        spacing: 30
 
-  Card {text: "Search page card 1"}
-  Card { text: "Search page card 2"}
-  Card { text: "Search page card 3"}
-  Card { text: "Search page card 4"}
+        SearchCard {}
+        SearchCard {}
+        SearchCard {}
+        SearchCard {}
+        SearchCard {}
+
+        Card {
+            Text {
+                text: "+"
+                anchors.centerIn: parent
+                font.pixelSize: 100
+                color: "#20FFFFFF"
+            }
+        }
+    }
 }

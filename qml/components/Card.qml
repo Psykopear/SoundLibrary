@@ -7,38 +7,24 @@ Item {
   property string text
   property var onActiveChanged
   property bool active: false
+  default property alias _contentChildren: content.data
   id: container
   width: 300
   height: 400
   onActiveChanged: {
     if (active) {
-      dropshadow.radius = 19
-      rectangle.color = "#262328"
+      content.color = "#221F24"
     } else {
-      dropshadow.radius = 12
-      rectangle.color = "#262328"
+      content.color = "#221F24"
     }
   }
 
   Rectangle {
-    id: rectangle
-    color: "#262328"
+    id: content
+    color: "#221F24"
+    border.width: 1
+    border.color: "#20FFFFFF"
     anchors.fill: parent
-
-    Text {
-      text: container.text
-    }
-
   }
 
-  DropShadow {
-    id: dropshadow
-    anchors.fill: container
-    horizontalOffset: 4
-    verticalOffset: 4
-    radius: 12
-    samples: 17
-    color: "#70000000"
-    source: rectangle
-  }
 }
